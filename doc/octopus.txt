@@ -1,0 +1,135 @@
+*octopus.txt* Keybindings and Configuration
+
+==============================================================================
+OCTOPUS MODULES                                              *octopus-modules*
+
+The following Lua modules are loaded for keymap utilities:
+  - files
+  - palette
+  - t_diff
+  - buffer_utils
+  - session_utils
+
+==============================================================================
+KEYMAPS BY SECTION                                           *octopus-sections*
+
+------------------------------------------------------------------------------
+FILE OPERATIONS *octopus-file-operations*
+
+Mode | Key             | Description
+---- | --------------- | -------------------------------------------------------
+n    | <leader>s       | Save current buffer
+n    | <leader>ss      | save all buffers
+n    | <leader>sa      | Save buffer as...
+n    | <Esc>           | Clear search highlights
+n    | <leader>q       | Quit all
+n    | <leader>QQ      | Force quit all
+
+------------------------------------------------------------------------------
+SPLITS AND WINDOWING *octopus-splits-and-windowing*
+
+Mode | Key             | Description
+---- | --------------- | -------------------------------------------------------
+n    | <leader>vs      | Vertical split
+n    | <leader>hs      | Horizontal split
+n    | <leader>M       | Maximize window
+
+------------------------------------------------------------------------------
+RESIZING *octopus-resizing*
+
+Mode | Key             | Description
+---- | --------------- | -------------------------------------------------------
+n    | <leader>h+      | Increase width
+n    | <leader>h-      | Decrease width
+n    | <leader>v+      | Increase height
+n    | <leader>v-      | Decrease height
+n    | <leader>w=      | Equally size windows
+
+------------------------------------------------------------------------------
+BUFFERS *octopus-buffers*
+
+Mode | Key             | Description
+---- | --------------- | -------------------------------------------------------
+n    | <leader>bn      | Next buffer
+n    | <leader>bp      | Previous buffer
+n    | <leader>bd      | Close current buffer
+n    | <leader>bD      | Close current buffer (ignore changes)
+n    | <leader>bq      | Close window/buffer
+n    | <leader>n       | New empty buffer
+
+------------------------------------------------------------------------------
+TABS *octopus-tabs*
+
+Mode | Key             | Description
+---- | --------------- | -------------------------------------------------------
+n    | <leader>tn      | Next tab
+n    | <leader>tp      | Previous tab
+n    | <leader>td      | Close tab
+n    | <leader>tc      | Create named tab
+n    | <leader>tl      | List/Switch tabs
+n    | <leader>tr      | Rename tab
+
+------------------------------------------------------------------------------
+TELESCOPE & SEARCH TOOLS *octopus-telescope-&-search-tools*
+
+Mode | Key             | Description
+---- | --------------- | -------------------------------------------------------
+n    | <leader>:       | Command palette
+n    | <leader>;       | Command history
+n    | <leader>p       | Telescope palette
+n    | <leader>fl      | Find files
+n    | <leader>bl      | List buffers
+n    | <leader>$       | Grep in project
+n    | <leader>sr      | Search and Replace
+n    | <leader>m       | Man pages
+
+------------------------------------------------------------------------------
+LSP & DIAGNOSTICS *octopus-lsp-&-diagnostics*
+
+Mode | Key             | Description
+---- | --------------- | -------------------------------------------------------
+n    | gd              | Go to definition
+n    | gD              | Go to declaration
+n    | gr              | List references
+n    | gh              | Show doc string
+n    | K               | Show diagnostics
+n    | <leader>@       | Document symbols
+n    | <leader>#       | Workspace symbols
+n    | <leader>/       | Toggle line comment
+v    | <leader>/       | Toggle block comment
+
+------------------------------------------------------------------------------
+SEQUENTIAL DIFF *octopus-sequential-diff*
+
+Mode | Key             | Description
+---- | --------------- | -------------------------------------------------------
+n    | <leader>db      | Diff buffers
+n    | <leader>df      | Diff files
+
+------------------------------------------------------------------------------
+NEOGIT *octopus-neogit*
+
+Mode | Key             | Description
+---- | --------------- | -------------------------------------------------------
+n    | <leader>gs      | Git status (Neogit)
+n    | <leader>gc      | Git commit
+n    | <leader>gp      | Git pull
+n    | <leader>gP      | Git push
+n    | <leader>gb      | Git branches
+n    | <leader>gl      | Git log
+n    | <leader>gd      | Diff current buffer with HEAD
+n    | <leader>ht      | Horizontal terminal
+n    | <leader>vt      | Vertical terminal
+n    | <leader>Tt      | Tab terminal
+t    | <C-n>           | Escape terminal to previous window
+
+------------------------------------------------------------------------------
+SESSION CONTROL (PRESERVE/LOAD) *octopus-session-control-(preserve/load)*
+
+Mode | Key             | Description
+---- | --------------- | -------------------------------------------------------
+n    | <leader>SS      | Save Session
+n    | <leader>SL      | Load Session
+
+==============================================================================
+ vim:tw=78:ts=8:ft=help:norl:
