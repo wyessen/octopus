@@ -1,9 +1,6 @@
 
 A Neovim configuration prioritizing minimalism and intuition.
 
-<img width="2180" height="1255" alt="Screenshot 2026-04-19 at 17 31 57" src="https://github.com/user-attachments/assets/c66892b1-68cb-4133-8228-d51b898bc4ea" />
-
-
 ## Philosophy
 The phylosophy is inspired by (aren't we all?) the original UNIX world view:
 keep it short, simple, do one thing and do it well. It does not attempt to
