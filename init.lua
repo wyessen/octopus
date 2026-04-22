@@ -21,6 +21,9 @@ if not is_headless then
     -- Load standard UI keymaps
     require('keymaps')
     require('autocommands')
+
+    -- Some misc utilities
+    require('make_utils')
 else
     -- In headless mode, we only want the bare minimum keymaps
     -- so we don't trigger "module not found" errors.
