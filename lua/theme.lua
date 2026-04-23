@@ -1,3 +1,3 @@
-vim.cmd.colorscheme("default")
+vim.cmd.colorscheme("catppuccin")
 vim.opt.background = "dark"
 
