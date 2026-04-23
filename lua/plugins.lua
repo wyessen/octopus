@@ -21,7 +21,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'MagicDuck/grug-far.nvim'
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'EdenEast/nightfox.nvim'
 Plug 'sindrets/diffview.nvim'
 Plug 'NeogitOrg/neogit'
 
