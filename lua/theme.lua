@@ -42,6 +42,6 @@ require('nightfox').setup({
   groups = {},
 })
 
-vim.cmd.colorscheme("dayfox")
-vim.opt.background = "light"
+vim.cmd.colorscheme("nightfox")
+vim.opt.background = "dark"
 
