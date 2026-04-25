@@ -30,3 +30,6 @@ end
 -- Session management options (save everything)
 vim.opt.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
 
+-- Set up system clipboard
+vim.opt.clipboard = "unnamedplus"
+
