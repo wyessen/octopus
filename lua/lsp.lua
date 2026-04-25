@@ -1,3 +1,6 @@
+-- clangd for c/c++
+-- requirements:
+--  - clangd
 vim.lsp.config('clangd', {
     cmd = { 
         'clangd', 
@@ -7,8 +10,19 @@ vim.lsp.config('clangd', {
     -- This is the equivalent of root_dir
     root_markers = { '.clangd', 'compile_commands.json', 'Makefile', '.git' },
 })
-
 vim.lsp.enable('clangd')
+
+
+-- bash/sh
+-- requirements
+--  - bash-language-server (core)
+--  - shellcheck (linting)
+vim.lsp.config('bashls', {
+  cmd = { 'bash-language-server', 'start' },
+  filetypes = { 'bash', 'sh' }
+})
+vim.lsp.enable('bashls')
+
 -- Add other servers and configurations here as needed.
 
 require('blink.cmp').setup({
