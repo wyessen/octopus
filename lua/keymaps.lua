@@ -16,6 +16,8 @@ vim.keymap.set('n', '<leader>QQ', ':qa!<CR>', { desc = 'Force quit all' })
 vim.keymap.set('n', '<leader>vs', ':vsplit<CR>', { desc = 'Vertical split' })
 vim.keymap.set('n', '<leader>hs', ':split<CR>', { desc = 'Horizontal split' })
 vim.keymap.set('n', '<leader>M', ':MaximizerToggle<CR>', { desc = 'Maximize window' })
+vim.keymap.set('n', '<leader>wn', '<C-w>n', { desc = 'Quickly jump to next window (creates one if none)' })
+vim.keymap.set('n', '<leader>wp', '<C-w>p', { desc = 'Quickly jump to prev window (creates one if none)' })
 
 -- Resizing
 vim.keymap.set('n', '<leader>h+', ':vertical resize +4<CR>', { desc = 'Increase width' })
@@ -60,25 +62,31 @@ vim.keymap.set('n', '<leader>@', ':Telescope lsp_document_symbols<CR>', { desc =
 vim.keymap.set('n', '<leader>#', ':Telescope lsp_workspace_symbols<CR>', { desc = 'Workspace symbols' })
 vim.keymap.set('n', '<leader>/', 'gcc', { remap = true, desc = "Toggle line comment" })
 vim.keymap.set('v', '<leader>/', 'gc', { remap = true, desc = "Toggle block comment" })
-
+vim.keymap.set('n', '<leader>qf', '<cmd>copen<cr>', { desc = 'Focus on quickfix window' })
+vim.keymap.set('n', '<leader>qk', '<cmd>copen<cr>', { desc = 'Kill the quickfix window' })
+vim.keymap.set('n', '<leader>qn', '<cmd>cnext<cr>', { desc = 'Jump to next fix' })
+vim.keymap.set('n', '<leader>qn', '<cmd>cprev<cr>', { desc = 'Jump to prev fix' })
+vim.keymap.set('n', '<leader>mk', '<cmd>silent make | redraw!<cr>', { desc = 'Run make and display output in quickfix window' })
 
 -- Sequential Diff
 vim.keymap.set('n', '<leader>db', function() t_diff.diff_sequentially("buffers") end, { desc = 'Diff buffers' })
 vim.keymap.set('n', '<leader>df', function() t_diff.diff_sequentially("files") end, { desc = 'Diff files' })
 
 -- Neogit
-vim.keymap.set('n', '<leader>gs', ':Neogit<CR>', { desc = 'Git status (Neogit)' })
-vim.keymap.set('n', '<leader>gc', ':Neogit commit<CR>', { desc = 'Git commit' })
-vim.keymap.set('n', '<leader>gp', ':Neogit pull<CR>', { desc = 'Git pull' })
-vim.keymap.set('n', '<leader>gP', ':Neogit push<CR>', { desc = 'Git push' })
-vim.keymap.set('n', '<leader>gb', ':Telescope git_branches<CR>', { desc = 'Git branches' })
-vim.keymap.set('n', '<leader>gl', ':Neogit log<CR>', { desc = 'Git log' })
-vim.keymap.set('n', '<leader>gd', ':DiffviewOpen HEAD -- %<cr>', { desc = 'Diff current buffer with HEAD' })
+vim.keymap.set('n', '<leader>Gs', ':Neogit<CR>', { desc = 'Git status (Neogit)' })
+vim.keymap.set('n', '<leader>Gc', ':Neogit commit<CR>', { desc = 'Git commit' })
+vim.keymap.set('n', '<leader>Gp', ':Neogit pull<CR>', { desc = 'Git pull' })
+vim.keymap.set('n', '<leader>GP', ':Neogit push<CR>', { desc = 'Git push' })
+vim.keymap.set('n', '<leader>Gb', ':Telescope git_branches<CR>', { desc = 'Git branches' })
+vim.keymap.set('n', '<leader>Gl', ':Neogit log<CR>', { desc = 'Git log' })
+vim.keymap.set('n', '<leader>Gd', ':DiffviewOpen HEAD -- %<cr>', { desc = 'Diff current buffer with HEAD' })
 
+-- Terminal control
 vim.keymap.set('n', '<leader>ht', ':split | term<CR>', { desc = 'Horizontal terminal' })
 vim.keymap.set('n', '<leader>vt', ':vsplit | term<CR>', { desc = 'Vertical terminal' })
 vim.keymap.set('n', '<leader>Tt', ':tabnew | term<CR>', { desc = 'Tab terminal' })
-vim.keymap.set('t', '<C-n>', [[<C-\><C-n><C-w>p]], { desc = 'Escape terminal to previous window' })
+vim.keymap.set('t', '<Esc><Esc>', [[<C-\><C-n><C-w>p]], { desc = 'Escape terminal to previous window' })
+vim.keymap.set('n', '<leader>t', function() local winid = vim.fn.bufwinid('term://') if winid ~= -1 then vim.api.nvim_set_current_win(winid) else vim.cmd('botright copen 10') vim.cmd('vsplit') vim.cmd('term') end vim.cmd('startinsert') end, { desc = 'Jump to terminal if open, or create one if not' })
 
 -- Session control (preserve/load)
 vim.keymap.set('n', '<leader>SS', session_utils.save_session_as, { desc = "Save Session" })

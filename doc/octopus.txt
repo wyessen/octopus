@@ -33,6 +33,8 @@ Mode | Key             | Description
 n    | <leader>vs      | Vertical split
 n    | <leader>hs      | Horizontal split
 n    | <leader>M       | Maximize window
+n    | <leader>wn      | Quickly jump to next window (creates one if none)
+n    | <leader>wp      | Quickly jump to prev window (creates one if none)
 
 ------------------------------------------------------------------------------
 RESIZING *octopus-resizing*
@@ -97,6 +99,11 @@ n    | <leader>@       | Document symbols
 n    | <leader>#       | Workspace symbols
 n    | <leader>/       | Toggle line comment
 v    | <leader>/       | Toggle block comment
+n    | <leader>qf      | Focus on quickfix window
+n    | <leader>qk      | Kill the quickfix window
+n    | <leader>qn      | Jump to next fix
+n    | <leader>qn      | Jump to prev fix
+n    | <leader>mk      | Run make and display output in quickfix window
 
 ------------------------------------------------------------------------------
 SEQUENTIAL DIFF *octopus-sequential-diff*
@@ -111,17 +118,24 @@ NEOGIT *octopus-neogit*
 
 Mode | Key             | Description
 ---- | --------------- | -------------------------------------------------------
-n    | <leader>gs      | Git status (Neogit)
-n    | <leader>gc      | Git commit
-n    | <leader>gp      | Git pull
-n    | <leader>gP      | Git push
-n    | <leader>gb      | Git branches
-n    | <leader>gl      | Git log
-n    | <leader>gd      | Diff current buffer with HEAD
+n    | <leader>Gs      | Git status (Neogit)
+n    | <leader>Gc      | Git commit
+n    | <leader>Gp      | Git pull
+n    | <leader>GP      | Git push
+n    | <leader>Gb      | Git branches
+n    | <leader>Gl      | Git log
+n    | <leader>Gd      | Diff current buffer with HEAD
+
+------------------------------------------------------------------------------
+TERMINAL CONTROL *octopus-terminal-control*
+
+Mode | Key             | Description
+---- | --------------- | -------------------------------------------------------
 n    | <leader>ht      | Horizontal terminal
 n    | <leader>vt      | Vertical terminal
 n    | <leader>Tt      | Tab terminal
-t    | <C-n>           | Escape terminal to previous window
+t    | <Esc><Esc>      | Escape terminal to previous window
+n    | <leader>t       | Jump to terminal if open, or create one if not
 
 ------------------------------------------------------------------------------
 SESSION CONTROL (PRESERVE/LOAD) *octopus-session-control-(preserve/load)*
