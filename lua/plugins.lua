@@ -23,6 +23,8 @@ Plug 'nvim-tree/nvim-tree.lua'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'sindrets/diffview.nvim'
 Plug 'NeogitOrg/neogit'
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
 
 -- Unfortunately built in server in nvim 0.12+ is still not powerful enough
 -- to replace blink.

@@ -18,9 +18,10 @@ if not is_headless then
     require('telescope_diff')
     require('telescope_palette')
 
-    -- Load standard UI keymaps
+    -- Load standard UI elements and keymaps
     require('keymaps')
     require('autocommands')
+    require('statline')
 else
     -- In headless mode, we only want the bare minimum keymaps
     -- so we don't trigger "module not found" errors.
