@@ -18,6 +18,10 @@ vim.keymap.set('n', '<leader>hs', ':split<CR>', { desc = 'Horizontal split' })
 vim.keymap.set('n', '<leader>M', ':MaximizerToggle<CR>', { desc = 'Maximize window' })
 vim.keymap.set('n', '<leader>wn', '<C-w>n', { desc = 'Quickly jump to next window (creates one if none)' })
 vim.keymap.set('n', '<leader>wp', '<C-w>p', { desc = 'Quickly jump to prev window (creates one if none)' })
+vim.keymap.set('n', '<leader>wl', '<C-w>l', { desc = 'Quickly jump to window on the right' })
+vim.keymap.set('n', '<leader>wh', '<C-w>h', { desc = 'Quickly jump to window on the left' })
+vim.keymap.set('n', '<leader>wj', '<C-w>j', { desc = 'Quickly jump to window below' })
+vim.keymap.set('n', '<leader>wk', '<C-w>k', { desc = 'Quickly jump to window above' })
 
 -- Resizing
 vim.keymap.set('n', '<leader>h+', ':vertical resize +4<CR>', { desc = 'Increase width' })

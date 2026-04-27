@@ -35,6 +35,10 @@ n    | <leader>hs      | Horizontal split
 n    | <leader>M       | Maximize window
 n    | <leader>wn      | Quickly jump to next window (creates one if none)
 n    | <leader>wp      | Quickly jump to prev window (creates one if none)
+n    | <leader>wl      | Quickly jump to window on the right
+n    | <leader>wh      | Quickly jump to window on the left
+n    | <leader>wj      | Quickly jump to window below
+n    | <leader>wk      | Quickly jump to window above
 
 ------------------------------------------------------------------------------
 RESIZING *octopus-resizing*
